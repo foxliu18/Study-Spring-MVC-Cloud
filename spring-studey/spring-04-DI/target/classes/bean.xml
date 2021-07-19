@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="student" class="com.summer.pojo.Student">
+
+        <!--普通注入-->
+        <property name="name" value="Markus"/>
+        <!--References to Other Beans-->
+        <property name="address" ref="address"/>
+        <!--set the properties and arguments of the Java-->
+        <property name="books">
+            <array>
+                <value>"Thinking in Java"</value>
+                <value>"Effective JAva"</value>
+                <value>"Java Virtual Machine"</value>
+            </array>
+        </property>
+        <property name="hobby">
+            <list>
+                <value>swimming</value>
+                <value>football</value>
+                <value>boxing</value>
+            </list>
+        </property>
+        <property name="cards">
+            <map>
+                <entry key="Bank Account" value="12345678"/>
+                <entry key="ID Card" value="1011215456"/>
+            </map>
+        </property>
+        <property name="games">
+            <set>
+                <value>GTA-5</value>
+                <value>DoTA</value>
+            </set>
+        </property>
+        <!--NULL-->
+        <property name="wife">
+            <null></null>
+        </property>
+        <!--properties-->
+        <property name="info">
+            <props>
+                <prop key="age">25</prop>
+                <prop key="gender">male</prop>
+                <prop key="description">This is a demo.</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="address" class="com.summer.pojo.Address">
+        <property name="address" value="Leopord Str. 21 45139 Essen"/>
+    </bean>
+
+
+</beans>

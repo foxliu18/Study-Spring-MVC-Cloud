@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 注册bean-->
+    <bean id="userService" class="com.summer.service.UserServiceImpl"/>
+    <bean id="log" class="com.summer.log.Log"/>
+    <bean id="logAfter" class="com.summer.log.LogAfter"/>
+
+    <!--AOP实现方法1-->
+    <!--<aop:config>
+        &lt;!&ndash;切入点 expression 表达式exection(执行的位置 ！ * * * * *)&ndash;&gt;
+        <aop:pointcut id="pointcut" expression="execution(* com.summer.service.UserServiceImpl.*(..))"/>
+
+        &lt;!&ndash;执行round&ndash;&gt;
+        <aop:advisor advice-ref="log" pointcut-ref="pointcut"/>
+        <aop:advisor advice-ref="logAfter" pointcut-ref="pointcut"/>
+    </aop:config>-->
+    
+
+    <!--AOP实现方法2-->
+    <!--<bean id="diy" class="com.summer.diy.DiyPoint"/>
+    <aop:config>
+        <aop:aspect ref="diy">
+            <aop:pointcut id="pointcut" expression="execution(* com.summer.service.UserServiceImpl.*(..))*"/>
+            <aop:before method="before" pointcut-ref="pointcut"/>
+            <aop:after method="after" pointcut-ref="pointcut"/>
+        </aop:aspect>
+    </aop:config>-->
+
+    <!--AOP实现方式3-->
+    <bean id="annotation" class="com.summer.diy.AnnotationPointcut"/>
+    <!---->
+    <aop:aspectj-autoproxy/>
+</beans>

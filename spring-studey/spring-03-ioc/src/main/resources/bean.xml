@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    Constructor argument index-->
+<!--    <bean id="user" class="com.summer.pojo.User">-->
+<!--        <constructor-arg index="0" value="Morgen"/>-->
+<!--    </bean>-->
+
+<!--    Constructor argument type matching-->
+    <bean id="user" class="com.User">
+        <constructor-arg type="java.lang.String" value="Morgen"/>
+    </bean>
+
+<!--    Constructor Argument Resolution-->
+<!--    <bean id="user" class="com.summer.pojo.User">-->
+<!--        <constructor-arg name="name" value="Gestern"/>-->
+<!--    </bean>-->
+    <bean id="userT" class="com.UserT">
+
+    </bean>
+
+
+    <!-- more bean definitions go here -->
+
+</beans>
