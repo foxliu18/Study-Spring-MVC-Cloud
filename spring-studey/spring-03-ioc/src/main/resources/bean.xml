@@ -5,7 +5,7 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 <!--    Constructor argument index-->
-<!--    <bean id="user" class="com.summer.pojo.User">-->
+<!--    <bean id="user" class="com.summer.pojo.Course">-->
 <!--        <constructor-arg index="0" value="Morgen"/>-->
 <!--    </bean>-->
 
@@ -15,7 +15,7 @@
     </bean>
 
 <!--    Constructor Argument Resolution-->
-<!--    <bean id="user" class="com.summer.pojo.User">-->
+<!--    <bean id="user" class="com.summer.pojo.Course">-->
 <!--        <constructor-arg name="name" value="Gestern"/>-->
 <!--    </bean>-->
     <bean id="userT" class="com.UserT">

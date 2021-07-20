@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-    <!--<environments default="development">
+    <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
@@ -16,9 +16,6 @@
     </environments>
 
     <mappers>
-        &lt;!&ndash;        <mapper resource="Mapper/UserMapper.xml"/>&ndash;&gt;
-        &lt;!&ndash;        <mapper url="file:///home/lkx-rog/code/IdeaProjects/SpringCloudStruct/application-mysql/src/main/resources/Mapper/UserMapper.xml"/>&ndash;&gt;
-        &lt;!&ndash;        <mapper class="com.applicationmysql.dao.UserMapper"/>&ndash;&gt;
         <package name="com.summer.mapper"/>
-    </mappers>-->
+    </mappers>
 </configuration>

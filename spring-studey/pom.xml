@@ -15,7 +15,7 @@
         <module>spring-04-DI</module>
         <module>spring-05-proxy</module>
         <module>spring-06-AOP</module>
-        <module>spring-mybatis</module>
+        <module>spring-07-mybatis</module>
         <module>spring-08-transaction</module>
     </modules>
 
