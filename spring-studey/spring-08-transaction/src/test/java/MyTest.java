@@ -16,7 +16,7 @@ public class MyTest {
     @Test
     public void test2(){
         ApplicationContext context = new ClassPathXmlApplicationContext("spring-dao.xml");
-        CourseMapperImpl bean = context.getBean(CourseMapperImpl.class);
+        CourseMapper bean = context.getBean(CourseMapper.class);
         bean.selectUser().forEach(user -> {
             System.out.println(user);
         });
