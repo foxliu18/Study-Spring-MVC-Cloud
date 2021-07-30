@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .idea
 .mvn
 target/*
@@ -6,9 +5,5 @@ target/*
 mvnw*
 log/
 *.class
-=======
-target/
-.idea/
-*.class
 *.iml
->>>>>>> 012cff5586f88dec625635b60bacd81437884eda
+
