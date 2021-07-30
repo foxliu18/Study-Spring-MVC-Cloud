@@ -12,6 +12,8 @@
         <module>SpringMVC-01-servlet</module>
         <module>SpringMVC-02-helloMVC</module>
         <module>SpringMVC-02-helloMVC-02</module>
+        <module>SpringMVC-03-annotation</module>
+        <module>SpringMVC-04-controller</module>
     </modules>
 
     <properties>
