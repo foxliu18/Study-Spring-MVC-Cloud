@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+    <script src="lib/jquery-3.6.0.js"></script>
+    <style>
+        #divMove{
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<!--
+公式：$(selector).action()
+-->
+<a herf="" id="test-jquery">点我</a>
+</br>
+mouse:    <span id="mouseMove"></span>
+<div id="divMove">
+
+</div>
+
+<script>
+
+    $('#test-jquery').click(function () {
+        alert('hello jQuery');
+    })
+
+    $('p').click() // 标签选择器
+    $('#id').click() // id选择器
+    $('.class').click() // 类选择器
+
+    //网页元素加载完称响应,可简化
+    /*$(document).ready(function (){
+
+    })*/
+    $(function (){
+        $('#divMove').mousemove(function (param) {
+            $('#mouseMove').text('x:'+param.pageX + ' y:' + param.pageY);
+
+        })
+    })
+
+</script>
+</body>
+</html>

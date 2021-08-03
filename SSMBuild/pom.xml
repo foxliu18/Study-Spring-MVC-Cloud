@@ -5,18 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>SpringMVC</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>SSMBuild</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>SpringMVC-01-servlet</module>
-        <module>SpringMVC-02-helloMVC</module>
-        <module>SpringMVC-02-helloMVC-02</module>
-        <module>SpringMVC-03-annotation</module>
-        <module>SpringMVC-04-controller</module>
-        <module>Spring-05-json</module>
-        <module>SpringMVC-05-json</module>
-    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -31,6 +21,21 @@
             <version>4.13.1</version>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.2.6</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>5.3.9</version>
+        </dependency>
+
+
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -57,6 +62,20 @@
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.5.7</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>2.0.6</version>
+        </dependency>
+
 
     </dependencies>
 

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/spring-context.xsd ">
+
+    <!--关联数据库-->
+    <context:property-placeholder location="classpath:database.properties"/>
+
+
+    <!--连接池
+        dbcp ：半自动化操作
+        c3p0：自动化操作
+        druid
+        hikari-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="${jdbc.driver}}"/>
+        <property name="url" value="${jdbc.url}}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="maxPoolPreparedStatementPerConnectionSize" value="30"/>
+    </bean>
+
+
+    <!--sqlSessionFactory-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+    </bean>
+
+
+    <!--配置dao接口扫描包， 动态实现dao接口可以注入到Spring中-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--注入sqlSessionFactory-->
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <!--要扫描的dao的包-->
+        <property name="basePackage" value="com.summer.dao"/>
+    </bean>
+</beans>

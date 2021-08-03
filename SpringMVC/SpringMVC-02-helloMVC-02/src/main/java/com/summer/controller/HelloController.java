@@ -11,8 +11,8 @@ public class HelloController implements Controller {
     public ModelAndView handleRequest(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
         ModelAndView mv = new ModelAndView();
 
-        String reslut = "HelloSpringMVC";
-        mv.addObject("msg", reslut);
+        String result = "HelloSpringMVC";
+        mv.addObject("msg", result);
 
         mv.setViewName("test");
 
