@@ -1,5 +1,8 @@
 package com.summer.pojo;
 
+import lombok.Data;
+
+@Data
 public class Books {
     private int bookID;
     private String bookName;
