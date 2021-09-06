@@ -7,7 +7,7 @@ log/
 *.class
 *.iml
 
-out
+out/
 .settings
 *.project
 *.prefs
