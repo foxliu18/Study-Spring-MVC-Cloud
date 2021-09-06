@@ -1,9 +1,16 @@
 .idea
 .mvn
-target/*
+target
 *.md
 mvnw*
 log/
 *.class
 *.iml
 
+out
+.settings
+*.project
+*.prefs
+/SpringMVC/SpringMVC-01-servlet/*.classpath
+*.classpath
+*.factorypath

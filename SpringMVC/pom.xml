@@ -14,9 +14,7 @@
         <module>SpringMVC-02-helloMVC-02</module>
         <module>SpringMVC-03-annotation</module>
         <module>SpringMVC-04-controller</module>
-        <module>Spring-05-json</module>
         <module>SpringMVC-05-json</module>
-        <module>Spring-06-ajax</module>
         <module>SpringMVC-06-ajax</module>
         <module>SpringMVC-07-intercepter</module>
         <module>SpringMVC-08-file</module>
