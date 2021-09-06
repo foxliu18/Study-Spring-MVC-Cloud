@@ -19,6 +19,7 @@
         <module>Spring-06-ajax</module>
         <module>SpringMVC-06-ajax</module>
         <module>SpringMVC-07-intercepter</module>
+        <module>SpringMVC-08-file</module>
     </modules>
 
     <properties>
