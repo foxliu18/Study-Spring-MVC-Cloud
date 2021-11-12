@@ -1,0 +1,16 @@
+server:
+  port: 8081
+# 对象
+student:
+  name: fox
+  age: 5
+
+# 行内写法
+student1: {name: liu, age: 5}
+
+# 数组
+pets: [cat, dog, pig]
+pet:
+  - name
+  - type
+

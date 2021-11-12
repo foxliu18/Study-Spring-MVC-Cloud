@@ -1,14 +1,13 @@
-package com.fall;
+package com.fall.springboot02config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Springboot01HelloworldApplication {
+public class Springboot02ConfigApplication {
 
     public static void main(String[] args) {
-        //启动springboot应用
-        SpringApplication.run(Springboot01HelloworldApplication.class, args);
+        SpringApplication.run(Springboot02ConfigApplication.class, args);
     }
 
 }
