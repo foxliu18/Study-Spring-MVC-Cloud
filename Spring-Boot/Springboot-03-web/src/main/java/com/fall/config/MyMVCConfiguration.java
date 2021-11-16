@@ -16,10 +16,21 @@ import java.util.Locale;
 @Configuration
 public class MyMVCConfiguration implements WebMvcConfigurer {
 
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry){
+        registry.addViewController("/").setViewName("coming/index");
+        registry.addViewController("/index.html").setViewName("coming/index");
+        registry.addViewController("/creative").setViewName("creative/index");
+    }
 
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
+                .excludePathPatterns("/index.html","/","/user/login","/static/**");
+    }
 
     // 试图跳转
-    /** @Override
+    /*** @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/fox").setViewName("test");
     }
