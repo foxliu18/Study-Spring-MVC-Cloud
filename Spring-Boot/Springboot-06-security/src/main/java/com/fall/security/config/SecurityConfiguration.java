@@ -18,7 +18,19 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 
         // 没有权限调回登陆页面, 需要开启登陆页面
-        http.formLogin();
+        http.formLogin().loginPage("/toLogin")
+                .usernameParameter("user") // 接受的用户名和密码
+                .passwordParameter("pwd")
+                .loginProcessingUrl("/login");
+
+        // 关闭CSRF 防止跨站攻击
+        http.csrf().disable();
+
+        // 开启注销
+        http.logout().logoutSuccessUrl("/");
+
+        // 开启记住我 存储cookie，默认存两周 自定义接收前端的参数
+        http.rememberMe().rememberMeParameter("remember");
     }
 
     // 认证
