@@ -24,6 +24,7 @@ public class ShiroConfig {
 
         // 授权 正常情况会调到未授权页面
         filterChainDefinitionMap.put("/user/add", "perms[user:add]");
+        filterChainDefinitionMap.put("/user/update", "perms[user:update]");
 
         filterChainDefinitionMap.put("/user/*","authc");
         bean.setFilterChainDefinitionMap(filterChainDefinitionMap);
